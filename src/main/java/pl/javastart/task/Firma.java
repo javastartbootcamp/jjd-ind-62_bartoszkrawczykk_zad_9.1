@@ -4,10 +4,14 @@ public class Firma {
 
     private String nazwa;
     private FormaOpodatkowania formaOpodatkowania;
+    private double sumaWplywow;
+    private double sumaWydatkow;
 
-    public Firma(String nazwa, FormaOpodatkowania formaOpodatkowania) {
+    public Firma(String nazwa, FormaOpodatkowania formaOpodatkowania, double sumaWplywow, double sumaWydatkow) {
         this.nazwa = nazwa;
         this.formaOpodatkowania = formaOpodatkowania;
+        this.sumaWplywow = sumaWplywow;
+        this.sumaWydatkow = sumaWydatkow;
     }
 
     public void wyswietlPodsumowanie() {
@@ -21,19 +25,43 @@ public class Firma {
         System.out.print("\n\n");
     }
 
-    private double zsumujWydatki() {
-        return 0;
+    public String getNazwa() {
+        return nazwa;
     }
 
-    private double zsumujPrzychody() {
-        return 0;
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
     }
 
-    public void dodajPrzychod(String nazwa, double wartosc) {
+    public FormaOpodatkowania getFormaOpodatkowania() {
+        return formaOpodatkowania;
+    }
+
+    public void setFormaOpodatkowania(FormaOpodatkowania formaOpodatkowania) {
+        this.formaOpodatkowania = formaOpodatkowania;
+    }
+
+    public double getSumaWplywow() {
+        return sumaWplywow;
+    }
+
+    public void setSumaWplywow(double sumaWplywow) {
+        this.sumaWplywow = sumaWplywow;
+    }
+
+    public double getSumaWydatkow() {
+        return sumaWydatkow;
+    }
+
+    public void setSumaWydatkow(double sumaWydatkow) {
+        this.sumaWydatkow = sumaWydatkow;
+    }
+
+    public void dodajPrzychod(double sumaWplywow) {
         // TODO
     }
 
-    public void dodajWydatek(String nazwa, double wartosc) {
+    public void dodajWydatek(double sumaWydatkow) {
         // TODO
     }
 }

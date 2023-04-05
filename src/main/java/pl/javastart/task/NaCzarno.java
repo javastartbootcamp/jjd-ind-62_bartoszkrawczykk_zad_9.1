@@ -5,6 +5,10 @@ public class NaCzarno extends FormaOpodatkowania {
 
     @Override
     public double wyliczPodatek(double przychody) {
-        return 0;
+        double podatek = 0;
+        if (przychody > 0) {
+            podatek = 0.15 * przychody;
+        }
+        return podatek;
     }
 }
